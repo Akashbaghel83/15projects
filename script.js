@@ -1,17 +1,21 @@
-var a = document.querySelector('body')
-var b = document.querySelector('#cursor')
-var c = document.querySelector('h1')
-a.addEventListener('mousemove', function(dets){
-    b.style.top = dets.y + "px"
-    b.style.left = dets.x + "px"
+var a = document.querySelector('button')
+var b = document.querySelector('h1')
+var c = document.querySelector('.real')
+var d = 0
 
-})
-c.addEventListener('mouseenter', function(){
-    b.style.scale = 3
-    
-})
-c.addEventListener('mouseleave', function(){
-    b.style.scale = 1
+a.addEventListener('click', function(){
+    var e = setInterval(function(){
+        d++
+        b.innerHTML = d + '%'
+        c.style.width = d + '%'
+                
+    },30)
+    setTimeout(function(){
+        clearInterval(e)
+        a.style.pointerEvents = 'none'
+        a.innerHTML = "DOWNLOADED"
+        a.style.opacity = 0.4
 
 
+    },3000)
 })
