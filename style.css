@@ -1,66 +1,78 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family:gilroy;
-}
-html,
+
 body {
-    height: 100%;
-    width: 100%;
-}
-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #111;
-}
-#card{
-    height: 400px;
-    width: 300px;
-    background-color: #fff;
-    border-radius: 10px;
-    position: relative;
-}
-#card h1{
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
     padding: 20px;
-    font-size: 20px;
-}
-#allStatus{
-    height: 80%;
-    overflow: auto;
-}
-.status{
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .todo-container {
+    max-width: 400px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .input-container {
     display: flex;
+    gap: 10px;
+  }
+  
+  .input-container input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .input-container button {
+    padding: 10px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .input-container button:hover {
+    background: #218838;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 20px;
-    padding: 10px 20px;
-    border-top: 1px solid #777;
-}
-
-.status img{
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    object-fit:cover ;
-    border: 2px solid rgb(89, 147, 4);
-    pointer-events: none;
-
-
-}
-.status-in{
-    pointer-events: none;
-}
-.status h6{
-    color: #888;
-}
-
-
-#full{
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    display: none;
-    background-size: cover;
-    background-position: center;
-}
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  li.completed {
+    text-decoration: line-through;
+    color: #6c757d;
+  }
+  
+  li button {
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  li button:hover {
+    background: #c82333;
+  }
+  
