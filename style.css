@@ -1,42 +1,66 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family:gilroy;
 }
-
-html, body{
+html,
+body {
     height: 100%;
     width: 100%;
-    background-color: rgb(54, 76, 100);
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
-
-.card{
+body{
     display: flex;
-    gap: 15px;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 200px;
+    justify-content: center;
+    background-color: #111;
+}
+#card{
+    height: 400px;
     width: 300px;
     background-color: #fff;
-    border-radius: 25px;
+    border-radius: 10px;
+    position: relative;
+}
+#card h1{
+    padding: 20px;
+    font-size: 20px;
+}
+#allStatus{
+    height: 80%;
+    overflow: auto;
+}
+.status{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 20px;
+    border-top: 1px solid #777;
 }
 
-h2{
-    color: red;
+.status img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit:cover ;
+    border: 2px solid rgb(89, 147, 4);
+    pointer-events: none;
+
+
+}
+.status-in{
+    pointer-events: none;
+}
+.status h6{
+    color: #888;
 }
 
-button{
-    padding: 5px 10px;
-    background-color: rgb(23, 105, 101);
-    border: none;
-    border-radius: 5px;
-    color: rgb(240, 248, 255);
-}
 
-button:active{
-    scale: 0.95;
+#full{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: none;
+    background-size: cover;
+    background-position: center;
 }
