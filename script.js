@@ -1,11 +1,30 @@
-var box = document.querySelector(".box")
-var btn = document.querySelector("button")
+var h2 = document.querySelector("h2");
+var btn = document.querySelector("button");
+var flag = 0
 
-btn.addEventListener("click", function(){
-    var r = Math.floor(Math.random()*255)
-    var g = Math.floor(Math.random() * 255)
-    var b = Math.floor(Math.random()*255)
+btn.addEventListener("click", function () {
+  if(flag === 0){
+    h2.style.color = "orange";
+    h2.innerHTML = "Request sending...";
 
-    box.style.backgroundColor = `rgb(${r},${g},${b})`
+    setTimeout(function () {
+      h2.innerHTML = "Friends";
+      h2.style.color = "green";
+      btn.innerHTML = "Remove Friend";
+      flag = 1;
+    }, 1000);
+  }
+  else{
+    h2.style.color = "orange";
+    h2.innerHTML = "Removing...";
 
-})
+    setTimeout(function () {
+      h2.innerHTML = "Stranger";
+      h2.style.color = "red";
+      btn.innerHTML = "Add Friend";
+      flag = 0;
+    }, 1000);
+  }
+
+
+});
