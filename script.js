@@ -1,10 +1,19 @@
-var teams = ["CSK", "MI", "KKR", "GT", "SRH", "RR", "LSG", "PBKS", "DC"];
+let img = document.querySelector("img");
+let imgX = 0;
+let imgY = 0;
 
-var btn = document.querySelector("button");
-var txt = document.querySelector("h1");
-
-btn.addEventListener("click", function () {
-  var num = Math.floor(Math.random() * teams.length);
-
-  txt.innerHTML = teams[num];
+document.addEventListener("keydown", function (dets) {
+  if (dets.code == "ArrowRight"  && imgX < 87) {
+    imgX++;
+    img.style.left = imgX + "%";
+  } else if (dets.code == "ArrowLeft" && imgX >= 0) {
+    imgX--;
+    img.style.left = imgX + "%";
+  } else if (dets.code == "ArrowUp"  && imgY >=0) {
+    imgY--;
+    img.style.top = imgY + "%";
+  } else if (dets.code == "ArrowDown" && imgY <70 ) {
+    imgY++;
+    img.style.top = imgY + "%";
+  }
 });
